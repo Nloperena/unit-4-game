@@ -1,0 +1,42 @@
+body {
+    background-image: ../images/tic-tac-toe.png; 
+    background-color: grey;
+    text-align: ;
+    margin-left: 465px;
+}
+
+header {
+    text-align: center;
+    height: 100px;
+}
+
+div {
+    background-color:teal;
+    width: 960px;
+    
+}
+
+#instructionsBox {
+   
+
+}
+
+#gemContainer {
+    width: 100%;
+    padding:10px;
+    border:solid;
+    position:relative;
+    border-
+    ;
+   
+}
+
+.gems {
+    width:10%;
+    height:5%;
+    margin-left:11.5%;
+}
+
+.jumbotron {
+    background-color: cyan;
+}
