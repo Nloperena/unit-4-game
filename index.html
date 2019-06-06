@@ -89,29 +89,6 @@
     </div>
 
     <script>
-        $("greenGem").on("click", function () {
-
-        })
-
-        //variables
-
-
-
-        //when gem is clicked it will give a value
-
-        //     $("greenGem").on("click, randomNum");
-
-        //     randomNum = Math.floor(Math.random() * 120);{
-        //         $("<p>Number Given: </p>" + ).text(numberGiven)
-        // }
-        //     numberGiven === randomNum;
-
-        //     gemFunction = function() {
-        //         math.floor(math.random() *20)
-        //     }
-
-
-
         var wins = 0;
         var loses = 0;
         var points = 20;
@@ -125,10 +102,8 @@
         document.getElementById("mainScore").innerHTML = "Number you need to reach: " + winningScore
 
 
-
-
-
-        //make a look that say you will win if the points reach the winning score and push it out to the 
+        var targetNumber = Math.floor(Math.random() * 101 + 19);
+        $("#mainScore").text("Number you need to reach: " + targetNumber);
 
         if (points === winningScore) {
             wins++
@@ -143,15 +118,26 @@
             alert("You lose")
         }
 
-        var targetNumber = Math.floor(Math.random() * 101 + 19);
-        $("#mainScore").text("Number you need to reach: " + targetNumber);
+
+
+
+        $("#greenGem").on("click", function () {
+            greenGem=== 2;
             
-        
-    
-    
-    
-    
-        // document.getElementById("numberGiven").innerHTML = "Number Given: " + randomNumber;
+        })
+        $("#blueGem").on("click", function () {
+            greenGem=== 5;
+            
+        })
+        $("#yellowGem").on("click", function () {
+            greenGem=== 9;
+            
+        })
+        $("#purpleGem").on("click", function () {
+            greenGem=== 13;
+            alert('asdfsa')
+        })
+
     </script>
 
 </html>
