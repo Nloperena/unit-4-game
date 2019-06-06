@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Josefin+Sans|Righteous&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
@@ -26,7 +28,7 @@
     <header>
         <div>
             <nav>
-                <h1>Gem game</h1>
+                <h1>Nicholas Loperena</h1>
             </nav>
         </div>
     </header>
@@ -34,25 +36,28 @@
 
         <div class="jumbotron">
             <h1 class="display-4">Welcome to my Gem Game!</h1>
-            <p class="lead">There are four gems, and they all carry a random number. You will recieve a random number. This is the score you need to win.
-                Each gem holds a random number with each new game. Use the gems provided to match the score needed to win. If you go over you lose.
+            <p class="lead">There are four gems, and they all carry a random number. You will recieve a random number.
+                This is the score you need to win.
+                Each gem holds a random number with each new game. Use the gems provided to match the score needed to
+                win. If you go over you lose.
             </p>
             <hr class="my-4">
             <p>
-                <p>Wins: </p>
-                <p>Loses: </p>
-                <p>Number Given: </p>
-                <p>Score: </p>
+                <p id = winScore></p>
+                <p id= loseScore></p>
+                <p id= numberGiven></p>
+                <p id= mainScore></p>
             </p>
             <div id=gemContainer>
-                <img class="gems" src="assets/images/greenRupee.png">
-                <img class="gems" src="assets/images/blueRupee.png">
-                <img class="gems" src="assets/images/yellowRupee.png">
-                <img class="gems" src="assets/images/purpleRupee.png">
+                <img class="gems" id ="greenGem" src="assets/images/greenRupee.png">
+                <img class="gems" id = "blueGem" src="assets/images/blueRupee.png">
+                <img class="gems" id = "yellowGem" src="assets/images/yellowRupee.png">
+                <img class="gems" id = "purpleGem" src="assets/images/purpleRupee.png">
             </div>
             <br>
             <br>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Start Game</a>
+            <a class="btn btn-primary btn-lg" id="startGame" href="#" role="button">Start Game</a>
+            <a class="btn btn-primary btn-lg" id="reset" href="#" role="button">Reset Game</a>
         </div>
 
 
@@ -84,6 +89,54 @@
     <div id="gemBox">
 
     </div>
-</body>
+    
+    <script>
+    
+    $("greenGem").on("click", function(){
+
+    })
+
+    //variables
+    
+    
+
+    //when gem is clicked it will give a value
+    
+//     $("greenGem").on("click, randomNum");
+
+//     randomNum = Math.floor(Math.random() * 120);{
+//         $("<p>Number Given: </p>" + ).text(numberGiven)
+// }
+//     numberGiven === randomNum;
+
+//     gemFunction = function() {
+//         math.floor(math.random() *20)
+//     }
+    
+
+
+    var wins = 0;
+    var loses = 0;
+    var points = 20;
+    var winningScore = 20;
+
+//make a look that say you will win if the points reach the winning score and push it out to the 
+
+    if (points === winningScore) {
+        wins++
+        winningScore.push(document.getElementById("Wins :" + ).innerHTML = winScore;)
+        // document.getElementById("wins").innerHTML = winScore;
+        alert("You win")
+    }
+    
+    else if (points > winningScore){
+        loses--
+        alert("You Lose")
+    }
+
+
+
+
+    </script>
 
 </html>
