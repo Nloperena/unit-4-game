@@ -43,10 +43,10 @@
             </p>
             <hr class="my-4">
             <p>
-                <p id=winScore></p>
-                <p id=loseScore></p>
-                <p id=numberGiven></p>
-                <p id=mainScore></p>
+                <p id="winScore"></p>
+                <p id="loseScore"></p>
+                <p id="numberGiven"></p>
+                <p id="mainScore"></p>
             </p>
             <div id=gemContainer>
                 <img class="gems" id="greenGem" src="assets/images/greenRupee.png">
@@ -56,8 +56,6 @@
             </div>
             <br>
             <br>
-            <a class="btn btn-primary btn-lg" id="startGame" href="#" role="button">Start Game</a>
-            <a class="btn btn-primary btn-lg" id="reset" href="#" role="button">Reset Game</a>
         </div>
 
 
@@ -116,18 +114,16 @@
 
         var wins = 0;
         var loses = 0;
-        var points = 21;
-        var winningScore = 20;
+        var points = 20;
+        var winningScore = [];
 
         // $("greenGem").on("click",gemNumber())
 
+        document.getElementById("winScore").innerHTML = "Wins: " + wins
+        document.getElementById("loseScore").innerHTML = "Losses: " + loses
+        document.getElementById("numberGiven").innerHTML = "Points: " + points
+        document.getElementById("mainScore").innerHTML = "Number you need to reach: " + winningScore
 
-
-        // function ranndomNumber() {
-        //    var number = document.getElementById("numberGiven").innerHTML = Math.floor(Math.random() * 120)
-        //     // "Number Chosen : " + numberGiven;
-        //     document.getElementById("number").innerHTML = "Number Chosen : " + numberGiven;
-        // };
 
 
 
@@ -147,9 +143,15 @@
             alert("You lose")
         }
 
-    
-        // document.getElementById("numberGiven").innerHTML = "Number Given: " + randomNumber;
+        //cant seem to get this to display
+        function ranndomNumber() {
+            var number = Math.floor(Math.random() * 120)
+            alert(number)
+            document.getElementById("numberGiven").innerHTML = "Number Chosen: " + number;
+            // alert(number)
+        };
 
+        // document.getElementById("numberGiven").innerHTML = "Number Given: " + randomNumber;
     </script>
 
 </html>
