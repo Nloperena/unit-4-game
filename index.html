@@ -43,16 +43,16 @@
             </p>
             <hr class="my-4">
             <p>
-                <p id = winScore></p>
-                <p id= loseScore></p>
-                <p id= numberGiven></p>
-                <p id= mainScore></p>
+                <p id=winScore></p>
+                <p id=loseScore></p>
+                <p id=numberGiven></p>
+                <p id=mainScore></p>
             </p>
             <div id=gemContainer>
-                <img class="gems" id ="greenGem" src="assets/images/greenRupee.png">
-                <img class="gems" id = "blueGem" src="assets/images/blueRupee.png">
-                <img class="gems" id = "yellowGem" src="assets/images/yellowRupee.png">
-                <img class="gems" id = "purpleGem" src="assets/images/purpleRupee.png">
+                <img class="gems" id="greenGem" src="assets/images/greenRupee.png">
+                <img class="gems" id="blueGem" src="assets/images/blueRupee.png">
+                <img class="gems" id="yellowGem" src="assets/images/yellowRupee.png">
+                <img class="gems" id="purpleGem" src="assets/images/purpleRupee.png">
             </div>
             <br>
             <br>
@@ -89,53 +89,66 @@
     <div id="gemBox">
 
     </div>
-    
+
     <script>
+        $("greenGem").on("click", function () {
+
+        })
+
+        //variables
+
+
+
+        //when gem is clicked it will give a value
+
+        //     $("greenGem").on("click, randomNum");
+
+        //     randomNum = Math.floor(Math.random() * 120);{
+        //         $("<p>Number Given: </p>" + ).text(numberGiven)
+        // }
+        //     numberGiven === randomNum;
+
+        //     gemFunction = function() {
+        //         math.floor(math.random() *20)
+        //     }
+
+
+
+        var wins = 0;
+        var loses = 0;
+        var points = 21;
+        var winningScore = 20;
+
+        // $("greenGem").on("click",gemNumber())
+
+
+
+        // function ranndomNumber() {
+        //    var number = document.getElementById("numberGiven").innerHTML = Math.floor(Math.random() * 120)
+        //     // "Number Chosen : " + numberGiven;
+        //     document.getElementById("number").innerHTML = "Number Chosen : " + numberGiven;
+        // };
+
+
+
+
+        //make a look that say you will win if the points reach the winning score and push it out to the 
+
+        if (points === winningScore) {
+            wins++
+            document.getElementById("winScore").innerHTML = "Wins: " + wins;
+            // document.getElementById("wins").innerHTML = winScore;
+            alert("You win")
+        }
+
+        if (points > winningScore) {
+            loses++
+            document.getElementById("loseScore").innerHTML = "Loses: " + loses;
+            alert("You lose")
+        }
+
     
-    $("greenGem").on("click", function(){
-
-    })
-
-    //variables
-    
-    
-
-    //when gem is clicked it will give a value
-    
-//     $("greenGem").on("click, randomNum");
-
-//     randomNum = Math.floor(Math.random() * 120);{
-//         $("<p>Number Given: </p>" + ).text(numberGiven)
-// }
-//     numberGiven === randomNum;
-
-//     gemFunction = function() {
-//         math.floor(math.random() *20)
-//     }
-    
-
-
-    var wins = 0;
-    var loses = 0;
-    var points = 20;
-    var winningScore = 20;
-
-//make a look that say you will win if the points reach the winning score and push it out to the 
-
-    if (points === winningScore) {
-        wins++
-        winningScore.push(document.getElementById("Wins :" + ).innerHTML = winScore;)
-        // document.getElementById("wins").innerHTML = winScore;
-        alert("You win")
-    }
-    
-    else if (points > winningScore){
-        loses--
-        alert("You Lose")
-    }
-
-
-
+        // document.getElementById("numberGiven").innerHTML = "Number Given: " + randomNumber;
 
     </script>
 
