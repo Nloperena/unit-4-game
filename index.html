@@ -91,53 +91,58 @@
     <script>
         var wins = 0;
         var loses = 0;
-        var points = 20;
+        var points = 1;
         var winningScore = [];
 
         // $("greenGem").on("click",gemNumber())
 
         document.getElementById("winScore").innerHTML = "Wins: " + wins
         document.getElementById("loseScore").innerHTML = "Losses: " + loses
-        document.getElementById("numberGiven").innerHTML = "Points: " + points
-        document.getElementById("mainScore").innerHTML = "Number you need to reach: " + winningScore
+        document.getElementById("numberGiven").innerHTML = "Number you need to reach: " + targetNumber
+        document.getElementById("mainScore").innerHTML = "Points: " + points
+
 
 
         var targetNumber = Math.floor(Math.random() * 101 + 19);
-        $("#mainScore").text("Number you need to reach: " + targetNumber);
+        $("#numberGiven").text("Number you need to reach: " + targetNumber);
 
+
+        //win condition
         if (points === winningScore) {
             wins++
             document.getElementById("winScore").innerHTML = "Wins: " + wins;
             // document.getElementById("wins").innerHTML = winScore;
             alert("You win")
         }
-
-        if (points > winningScore) {
+        //lose condition
+        else if (points < winningScore) {
             loses++
             document.getElementById("loseScore").innerHTML = "Losses: " + loses;
             alert("You lose")
+
         }
 
 
 
 
-        $("#greenGem").on("click", function () {
-            greenGem=== 2;
-            
-        })
-        $("#blueGem").on("click", function () {
-            greenGem=== 5;
-            
-        })
-        $("#yellowGem").on("click", function () {
-            greenGem=== 9;
-            
-        })
-        $("#purpleGem").on("click", function () {
-            greenGem=== 13;
-            alert('asdfsa')
-        })
+        // $("#greenGem").on("click", function () {
+        //     greenGem;
+        //     document.getElementById("main").innerHTML = "Points: " + points++;
+        // })
+        // $("#blueGem").on("click", function () {
+        //     greenGem === 5;
+        //     document.getElementById("main").innerHTML = "Points: " + points++;
 
+        // })
+        // $("#yellowGem").on("click", function () {
+        //     greenGem === 9;
+        //     document.getElementById("main").innerHTML = "Points: " + points++;
+
+        // })
+        // $("#purpleGem").on("click", function () {
+        //     greenGem === 13;
+        //     document.getElementById("main").innerHTML = "Points: " + points++;
+        // })
     </script>
 
 </html>
