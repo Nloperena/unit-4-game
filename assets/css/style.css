@@ -47,6 +47,7 @@ div {
     border: solid;
     box-shadow: 10px;
 }
-button {
+.container {
+    border:solid;
     
 }
